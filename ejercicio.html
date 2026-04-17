@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor HTML - Minijuego</title>
+    <!-- Enlazamos los estilos de nuestro minijuego -->
+    <link rel="stylesheet" href="ejercicio.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Panel Izquierdo: Opciones Tecnicas -->
+        <div class="panel-herramientas">
+            <h2 style="color:white">Constructor HTML</h2>
+            <p style="color:#94a3b8">Usa tus conocimientos. Selecciona la etiqueta adecuada para construir el componente.</p>
+            
+            <div id="instruccion-actual" class="caja-instruccion">
+                Cargando nivel...
+            </div>
+
+            <div class="grid-botones" id="contenedor-botones">
+                <!-- Se crearán con JS dinamicamente -->
+            </div>
+            
+            <!-- Toast notification system interactivo -->
+            <div id="toast" class="toast"></div>
+        </div>
+
+        <!-- Panel Derecho: Resultado Visual -->
+        <div class="panel-resultado">
+            <div class="marco-render">
+                <div id="tarjeta-perfil" class="tarjeta-perfil">
+                    <!-- Aquí caerán los elementos inyectados en tiempo real -->
+                </div>
+            </div>
+            <a href="index.html" class="btn-volver">← Volver al Documento de Teoría</a>
+        </div>
+    </div>
+    
+    <!-- Enlazamos el motor lógico de Javascript -->
+    <script src="ejercicio.js"></script>
+</body>
+</html>
