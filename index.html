@@ -4,76 +4,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi pagina web</title>
-    <link rel="stylesheet" href="estilos.css">
+    <title>Ultimate Team Cards - Algoritmos</title>
+    <!-- importacion de estilos-->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>Mi pagina web</h1>
-    <p style="text-align: center;">Esta es una pagina dedicada solo para aprender lo basico de HTML, CSS y JS 👀
-        [Chamito Samuel]</p>
+    <header>
+        <h1>Colección de Cartas</h1>
+        <p>Avance Fase 1: Estructura Visual y Lógica de Datos</p>
+    </header>
 
-    <!-- Botón directo hacia el minijuego -->
-    <div style="text-align: center; margin: 30px 0;">
-        <a href="ejercicio.html" class="boton-accion"
-            style="background-color: #f39c12; font-size: 1.3rem; padding: 15px 30px; box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4); text-decoration: none;">
-            🎮 ¡Jugar al Minijuego Constructor HTML!
-        </a>
-    </div>
+    <main>
+        <div id="contenedor-cartas">
 
-    <div class="contenedor-columnas">
-        <!-- PRIMERA COLUMNA: Teoría básica -->
-        <div class="columna">
-            <h2>¿Para que sirve la etiqueta H1?</h2>
-            <p>La etiqueta H1 sirve para indicar el titulo principal de la pagina web</p>
+            <!-- CARTA 1: MESSI -->
+            <div class="carta">
+                <div class="carta-top">
+                    <div class="carta-rating">90</div>
+                    <div class="carta-posicion">EI</div>
+                </div>
+                <div class="carta-imagen">
+                    <img src="/img/messi.jpg" alt="Foto de Lionel Messi">
+                </div>
+                <h3 class="carta-nombre">Lionel Messi</h3>
+                <div class="carta-stats">
+                    <div class="stat"><span class="val">80</span><span class="lbl">RIT</span></div>
+                    <div class="stat"><span class="val">87</span><span class="lbl">TIR</span></div>
+                    <div class="stat"><span class="val">90</span><span class="lbl">PAS</span></div>
+                    <div class="stat"><span class="val">94</span><span class="lbl">REG</span></div>
+                    <div class="stat"><span class="val">33</span><span class="lbl">DEF</span></div>
+                    <div class="stat"><span class="val">64</span><span class="lbl">FIS</span></div>
+                </div>
+            </div>
 
-            <h2>¿Para que sirve la etiqueta P?</h2>
-            <p>La etiqueta P sirve para indicar un parrafo de texto</p>
+            <!-- CARTA 2: MBAPPÉ -->
+            <div class="carta">
+                <div class="carta-top">
+                    <div class="carta-rating">91</div>
+                    <div class="carta-posicion">DC</div>
+                </div>
+                <div class="carta-imagen">
+                    <img src="/img/Mbappe.jpg" alt="Foto de Kilian Mbappé">
+                </div>
+                <h3 class="carta-nombre">Kilian Mbappé</h3>
+                <div class="carta-stats">
+                    <div class="stat"><span class="val">97</span><span class="lbl">RIT</span></div>
+                    <div class="stat"><span class="val">90</span><span class="lbl">TIR</span></div>
+                    <div class="stat"><span class="val">80</span><span class="lbl">PAS</span></div>
+                    <div class="stat"><span class="val">92</span><span class="lbl">REG</span></div>
+                    <div class="stat"><span class="val">36</span><span class="lbl">DEF</span></div>
+                    <div class="stat"><span class="val">78</span><span class="lbl">FIS</span></div>
+                </div>
+            </div>
 
-            <h2>¿Para que sirve la etiqueta H2?</h2>
-            <p>La etiqueta H2 sirve para indicar un subtitulo de la pagina web</p>
+            <!-- CARTA 3: VINI JR -->
+            <div class="carta">
+                <div class="carta-top">
+                    <div class="carta-rating">89</div>
+                    <div class="carta-posicion">EI</div>
+                </div>
+                <div class="carta-imagen">
+                    <img src="/img/Vini.jpg" alt="Foto de Vini Jr.">
+                </div>
+                <h3 class="carta-nombre">Vini Jr.</h3>
+                <div class="carta-stats">
+                    <div class="stat"><span class="val">95</span><span class="lbl">RIT</span></div>
+                    <div class="stat"><span class="val">82</span><span class="lbl">TIR</span></div>
+                    <div class="stat"><span class="val">81</span><span class="lbl">PAS</span></div>
+                    <div class="stat"><span class="val">90</span><span class="lbl">REG</span></div>
+                    <div class="stat"><span class="val">29</span><span class="lbl">DEF</span></div>
+                    <div class="stat"><span class="val">68</span><span class="lbl">FIS</span></div>
+                </div>
+            </div>
 
-            <h2>Tambien existen las listas ordenadas y desordenadas</h2>
+            <!-- CARTA 4: BELLINGHAM -->
+            <div class="carta">
+                <div class="carta-top">
+                    <div class="carta-rating">86</div>
+                    <div class="carta-posicion">MC</div>
+                </div>
+                <div class="carta-imagen">
+                    <img src="/img/Bellingham.jpg" alt="Foto de J. Bellingham">
+                </div>
+                <h3 class="carta-nombre">J. Bellingham</h3>
+                <div class="carta-stats">
+                    <div class="stat"><span class="val">82</span><span class="lbl">RIT</span></div>
+                    <div class="stat"><span class="val">84</span><span class="lbl">TIR</span></div>
+                    <div class="stat"><span class="val">85</span><span class="lbl">PAS</span></div>
+                    <div class="stat"><span class="val">88</span><span class="lbl">REG</span></div>
+                    <div class="stat"><span class="val">78</span><span class="lbl">DEF</span></div>
+                    <div class="stat"><span class="val">82</span><span class="lbl">FIS</span></div>
+                </div>
+            </div>
 
-            <h2>¿Para que sirve la etiqueta UL?</h2>
-            <p>La etiqueta UL sirve para indicar una lista desordenada</p>
-            <ul>
-                <li>Arroz</li>
-                <li>Frijoles</li>
-                <li>Lentejas</li>
-            </ul>
-
-            <h2>¿Para que sirve la etiqueta OL?</h2>
-            <p>La etiqueta OL sirve para indicar una lista ordenada</p>
-            <ol>
-                <li>Arroz</li>
-                <li>Frijoles</li>
-                <li>Lentejas</li>
-            </ol>
         </div>
+    </main>
 
-        <!-- SEGUNDA COLUMNA: Imagen, enlace e interactividad -->
-        <div class="columna">
-            <h2>¿Para que sirve la etiqueta IMG?</h2>
-            <p>La etiqueta IMG sirve para indicar una imagen</p>
-            <img id="miImagen" src="https://i.pinimg.com/originals/0a/bb/80/0abb807cbbae99e497e3b41113937de3.jpg"
-                alt="dev">
-
-            <h2>¿Para que sirve la etiqueta A?</h2>
-            <p>La etiqueta A sirve para indicar un enlace</p>
-            <a href="https://bruno-simon.com/">Portafolio</a>
-
-            <!-- Nueva sección interactiva para JavaScript -->
-            <hr>
-            <h2>¡Interactividad con JavaScript!</h2>
-            <p>Haz clic en los botones para ver la magia de JS:</p>
-            <button id="btnColor" class="boton-accion">Cambiar Fondo</button>
-            <button id="btnOcultar" class="boton-accion">Ocultar Imagen</button>
-        </div>
-    </div>
-
-    <!-- Enlazamos nuestro archivo JavaScript -->
-    <script src="script.js"></script>
+    <!-- impocion de script -->
+    <script src="app.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,162 @@
+/* Importamos una tipografía moderna de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&display=swap');
+
+/* Reseteo básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    /* Fondo oscuro y premium para que resalten las cartas */
+    background-color: #12121a;
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+header h1 {
+    font-size: 3rem;
+    /* Un color dorado estilo Ultimate Team */
+    color: #e9c46a;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 10px rgba(233, 196, 106, 0.3);
+}
+
+header p {
+    color: #a0a0b0;
+    font-size: 1.1rem;
+}
+
+/* CSS GRID: La forma más moderna de crear cuadriculas responsivas */
+#contenedor-cartas {
+    display: grid;
+    /* Esto hace que las cartas se organicen solas dependiendo del ancho de la pantalla */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 3rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* --- DISEÑO DE LA CARTA --- */
+.carta {
+    /* Gradiente oscuro con bordes dorados */
+    background: linear-gradient(135deg, #24243e 0%, #0f0c29 100%);
+    border: 2px solid #e9c46a;
+    border-radius: 18px;
+    padding: 1.5rem;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Micro-animación al pasar el mouse (Hover) */
+.carta:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(233, 196, 106, 0.3);
+    border-color: #f4d03f;
+}
+
+/* Brillo que pasa sobre la carta al hacer hover */
+.carta::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%; width: 50%; height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0) 100%);
+    transform: skewX(-25deg);
+    transition: 0.6s;
+    pointer-events: none;
+}
+
+.carta:hover::before {
+    left: 150%;
+}
+
+/* Estadísticas de la barra superior izquierda */
+.carta-top {
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carta-rating {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #e9c46a;
+    line-height: 1;
+}
+
+.carta-posicion {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #ffffff;
+    margin-top: 2px;
+}
+
+/* Imagen del jugador */
+.carta-imagen {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0 1rem;
+}
+
+.carta-imagen img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    /* Borde resaltado para recortar la imagen */
+    border: 4px solid #1a1a2e;
+    box-shadow: 0 0 0 3px #e9c46a;
+    object-fit: cover;
+}
+
+/* Nombre del Jugador */
+.carta-nombre {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(233, 196, 106, 0.2);
+    padding-bottom: 0.8rem;
+    color: #f8f8f8;
+}
+
+/* Cuadrícula interna de estadísticas (RIT, TIR, etc) */
+.carta-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem 2rem;
+}
+
+.stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stat .val {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #e9c46a;
+}
+
+.stat .lbl {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #a0a0b0;
+}
